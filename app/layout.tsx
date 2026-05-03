@@ -4,13 +4,40 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "jigustore",
-  description: "Website of Jigustore",
+  title: "Jigu Store",
+  description: "Shop the lastest electronics and technological components, accessories and software solution at Jigu Store. Providing high-quality tech solution & educational kits across Kathmandu, Nepal",
+  keywords: ['Tech Store Nepal', 'Jigu Store', 'Electronics Component Kathamdnu', 'Online Electronics Nepal', 'Kits', 'Electronics Kit'],
+
+  openGraph: {
+    title: 'Jigu Store',
+    description: 'Your one-stop shop for tech hardware and software gadgets in Nepal',
+    url: 'https://jigustore.com.np',
+    siteName: 'Jigu Store',
+    locale: 'en_NP',
+    type: 'website'
+  },
+
   icons: {
     icon: [
       { url: '/icon.png' }
     ]
+  },
+
+  alternates: {
+    canonical: 'https://jigustore.com.np',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    }
   }
+
 };
 
 export default function RootLayout({
