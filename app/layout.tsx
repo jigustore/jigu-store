@@ -4,8 +4,13 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Jigustore",
+  title: "jigustore",
   description: "Website of Jigustore",
+  icons: {
+    icon: [
+      { url: '/icon.png' }
+    ]
+  }
 };
 
 export default function RootLayout({
