@@ -1,28 +1,10 @@
+import { _navItems } from "@/lib/data/_navItems";
 import Link from "next/link";
 
 interface INavItem {
   label: string;
   url: string;
 }
-
-const _navItems = [
-  {
-    label: "Home",
-    url: "/",
-  },
-  {
-    label: "Services",
-    url: "/services",
-  },
-  {
-    label: "About",
-    url: "/about",
-  },
-  {
-    label: "Contact",
-    url: "/contact",
-  },
-];
 
 const Navbar = () => {
   return (

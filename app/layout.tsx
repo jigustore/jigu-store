@@ -13,7 +13,11 @@ export const metadata: Metadata = {
     "Electronics Component Kathamdnu",
     "Online Electronics Nepal",
     "Kits",
-    "Electronics Kit",
+    "NIC Jigu Store",
+    "Vending Machine Nepal",
+    "Jigu Store Vending Machine",
+    "Education Kits",
+    "Electronics Kits",
   ],
 
   openGraph: {
