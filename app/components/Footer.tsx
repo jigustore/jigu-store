@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <footer className="w-full py-4 bg-theme-w-alt">
