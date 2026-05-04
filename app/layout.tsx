@@ -58,7 +58,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`h-full antialiased`}>
       <head>
-        <meta name="google-site-verification" content="c6V1ouF2juqZmodl2dxau5EaIM-Ju2g_kYBO47d6OeU" />
+        <meta
+          name="google-site-verification"
+          content="c6V1ouF2juqZmodl2dxau5EaIM-Ju2g_kYBO47d6OeU"
+        />
       </head>
       <body className="min-h-full flex flex-col justify-between items-center relative pt-15 text-center">
         <Navbar />
