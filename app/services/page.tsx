@@ -20,7 +20,7 @@ const Services = () => {
     <div className="w-full">
       <h1 className="text-theme-gray font-bold my-2 text-3xl">Services</h1>
 
-      <section className="w-full flex flex-col justify-evenly items-center gap-6 my-10 md:px-20 px-10">
+      <section className="w-full m-auto max-w-6xl flex flex-col justify-evenly items-center gap-6 my-10 md:px-20 px-10">
         {_serviceCatEntry.map((sce, ind) => {
           return <ServiceCat key={ind} {...sce} />;
         })}

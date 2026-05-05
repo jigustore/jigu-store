@@ -24,7 +24,7 @@ const Contact = () => {
 
         <h2 className="text-theme font-bold my-8">Other Media</h2>
         <div className="flex flex-col sm:flex-row justify-evenly items-center gap-5 sm:gap-20">
-          <div className="flex flex-col justify-evenly items-center border border-theme-gray/30 shadow-sm rounded-md">
+          <a href="https://wa.me/+9868053067" className="flex flex-col justify-evenly items-center border border-theme-gray/30 shadow-sm rounded-md">
             <Image
               text={"https://wa.me/+9868053067"}
               options={{
@@ -36,9 +36,9 @@ const Contact = () => {
                 width: 200,
               }}
             />
-            <FaWhatsapp className="text-theme-green text-3xl" />
-          </div>
-          <div className="flex flex-col justify-evenly items-center border border-theme-gray/30 shadow-sm rounded-md">
+            <span>Whatsapp<FaWhatsapp className="text-theme-green text-3xl inline-block mx-1" /></span>
+          </a>
+          <a href="viber://chat/?number=+9779868053067" className="flex flex-col justify-evenly items-center border border-theme-gray/30 shadow-sm rounded-md">
             <Image
               text={"viber://chat/?number=+9779868053067"}
               options={{
@@ -50,8 +50,8 @@ const Contact = () => {
                 width: 200,
               }}
             />
-            <FaViber className="text-theme text-3xl" />
-          </div>
+            <span>Viber<FaViber className="text-theme text-3xl inline-block mx-1" /></span>
+          </a>
         </div>
       </section>
     </div>
