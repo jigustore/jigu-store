@@ -8,7 +8,8 @@ export const _serviceCatEntryBase = [
     },
     {
         title: "Sanitory Pad Despensor Machine",
-        descriptions: "Sanitory Pad Vending Machine has packets of pads that is dispensed after button press."
+        descriptions: "Sanitory Pad Vending Machine has packets of pads that is dispensed after button press.",
+        available: true,
       },
     ],
   },
@@ -34,7 +35,8 @@ export const _serviceCatEntryBase = [
     items: [
         {
             title: "Bee Honey",
-            descriptions: ""
+            descriptions: "",
+            available: true,
       },
     ],
   },
@@ -45,9 +47,8 @@ export const _serviceCatEntry = _serviceCatEntryBase.map((sceb) => {
         title: sceb.title,
         items: sceb.items.map((scebi) => {
             return {
-                title: scebi.title,
+                ...scebi,
                 imgURL: `/images/services/${sceb.title}/${scebi.title}.png`,
-                descriptions: scebi.descriptions
             }
         })
     }

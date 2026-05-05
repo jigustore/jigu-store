@@ -1,11 +1,13 @@
 import { _serviceCatEntry } from "@/lib/data/_serviceCat";
 import CommingSoon from "../components/CommingSoon";
 import Link from "next/link";
+import { CiCircleInfo } from "react-icons/ci";
 
 interface IServiceCatItem {
   title: string;
   imgURL?: string;
   descriptions?: string;
+  available?: boolean; // if false, then comming soon
 }
 
 interface IServiceCat {
@@ -34,7 +36,7 @@ const ServiceCat = ({ title, items }: IServiceCat) => {
       <h2 className="font-extrabold uppercase text-theme underline mb-3 text-xl">
         {title}
       </h2>
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 px-10">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 place-items-center gap-5 px-10">
         {items?.map((scei, ind) => {
           return <ServiceCatItem key={ind} {...scei} />;
         })}
@@ -43,9 +45,19 @@ const ServiceCat = ({ title, items }: IServiceCat) => {
   );
 };
 
-const ServiceCatItem = ({ title, imgURL, descriptions }: IServiceCatItem) => {
+const ServiceCatItem = ({
+  title,
+  imgURL,
+  descriptions,
+  available,
+}: IServiceCatItem) => {
   return (
-    <div className="flex flex-col justify-evenly min-w-56 min-h-56 rounded-xl border border-theme/50 hover:border-theme shadow-md p-2 hover:bg-theme-w-alt duration-300 gap-4">
+    <div className="relative flex flex-col justify-evenly min-w-56 w-full md:max-w-sm min-h-56 rounded-xl border border-theme/30 hover:border-theme hover:-translate-y-0.5 shadow-md p-2 duration-300 gap-4">
+      <span
+        className={`absolute top-[5%] left-[-5%] -rotate-45 animate-pulse font-bold text-vs ${!available ? "text-red-500" : "text-green-500"}`}
+      >
+        {!available ? "Comming Soon" : "Available"}
+      </span>
       <h2 className="font-semibold">{title}</h2>
       <img
         src={imgURL}
@@ -57,8 +69,9 @@ const ServiceCatItem = ({ title, imgURL, descriptions }: IServiceCatItem) => {
       </p>
       <Link
         href={`/services/${title}`}
-        className="bg-theme-alt/80 hover:bg-theme text-theme-w p-1 font-semibold rounded-md"
+        className="bg-theme-alt/80 hover:bg-theme text-theme-w p-1 px-2 font-semibold rounded-md"
       >
+        <CiCircleInfo className="inline-block mr-2" />
         Enquire now
       </Link>
     </div>
