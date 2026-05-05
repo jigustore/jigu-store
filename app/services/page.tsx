@@ -1,7 +1,7 @@
 import { _serviceCatEntry } from "@/lib/data/_serviceCat";
 import CommingSoon from "../components/CommingSoon";
 import Link from "next/link";
-import { CiCircleInfo } from "react-icons/ci";
+import { CiCircleInfo, CiStar } from "react-icons/ci";
 
 interface IServiceCatItem {
   title: string;
@@ -18,29 +18,34 @@ interface IServiceCat {
 const Services = () => {
   return (
     <div className="w-full">
-      <h1>Services</h1>
-      <section className="w-full flex flex-col justify-evenly items-center gap-6 my-10">
+      <h1 className="text-theme-gray font-bold my-2 text-3xl">Services</h1>
+
+      <section className="w-full flex flex-col justify-evenly items-center gap-6 my-10 md:px-20 px-10">
         {_serviceCatEntry.map((sce, ind) => {
           return <ServiceCat key={ind} {...sce} />;
         })}
       </section>
 
-      <CommingSoon />
+      <CommingSoon>
+        <span>Others Comming Soon!!</span>
+      </CommingSoon>
     </div>
   );
 };
 
 const ServiceCat = ({ title, items }: IServiceCat) => {
   return (
-    <div className="w-full my-2">
-      <h2 className="font-extrabold uppercase text-theme underline mb-3 text-xl">
+    <div className="w-full my-2 flex flex-col justify-evenly items-start">
+      <h2 className="font-extrabold text-theme mb-5 text-xl p-1">
+        <CiStar className="inline-block mr-1" />
         {title}
       </h2>
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 place-items-center gap-5 px-10">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 place-items-center gap-5">
         {items?.map((scei, ind) => {
           return <ServiceCatItem key={ind} {...scei} />;
         })}
       </div>
+      <hr className="w-[90%] m-auto border-theme-gray/30 my-5" />
     </div>
   );
 };
@@ -52,7 +57,7 @@ const ServiceCatItem = ({
   available,
 }: IServiceCatItem) => {
   return (
-    <div className="relative flex flex-col justify-evenly min-w-56 w-full md:max-w-sm min-h-56 rounded-xl border border-theme/30 hover:border-theme hover:-translate-y-0.5 shadow-md p-2 duration-300 gap-4">
+    <div className="relative flex flex-col justify-evenly min-w-56 w-full h-full md:max-w-sm min-h-56 rounded-xl border border-theme/30 hover:border-theme hover:-translate-y-0.5 shadow-md p-2 duration-300 gap-4">
       <span
         className={`absolute top-[5%] left-[-5%] -rotate-45 animate-pulse font-bold text-vs ${!available ? "text-red-500" : "text-green-500"}`}
       >
@@ -68,7 +73,7 @@ const ServiceCatItem = ({
         {descriptions ? descriptions : "For More Info"}
       </p>
       <Link
-        href={`/services/${title}`}
+        href={`https://wa.me/+9779868053067?text=I am interested in ${title}`}
         className="bg-theme-alt/80 hover:bg-theme text-theme-w p-1 px-2 font-semibold rounded-md"
       >
         <CiCircleInfo className="inline-block mr-2" />

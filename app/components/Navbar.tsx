@@ -8,9 +8,10 @@ interface INavItem {
 
 const Navbar = () => {
   return (
-    <nav className="w-full flex flex-row justify-between items-center fixed top-0 bg-theme-w-alt p-2 px-6 gap-10">
+    <nav className="w-full z-50 flex flex-row justify-between items-center fixed top-0 bg-theme-w-alt p-3 px-6 gap-10">
       <Link href={"/"} className="text-theme font-bold ">
-        Jigustore
+        {/* Jigustore */}
+        <img src="/icon.png" className="max-h-18 -my-10" />
       </Link>
       <div className="flex flex-row gap-2">
         {_navItems.map((ni, ind) => {

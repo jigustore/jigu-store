@@ -7,7 +7,33 @@
   --color-theme-w-alt: #efefef;
   --color-theme-black: #111111;
   --color-theme-black-alt: #222222;
+  --color-theme-green: #11ee11;
+  --color-theme-red: #ee1111;
+  --color-theme-gray: #787878;
   --text-s: 0.85rem;
   --text-vs: 0.75rem;
   --text-vse9: 0.9em;
+
+  --animate-wiggle: wiggle 3s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes gradient {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  --animate-gradient-x: gradient 6s ease infinite;
 }

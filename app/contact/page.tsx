@@ -1,11 +1,59 @@
-import CommingSoon from "../components/CommingSoon";
+"use client";
+
+import { BiMailSend, BiMobile } from "react-icons/bi";
+import { useQRCode } from "next-qrcode";
+import { FaViber, FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
+  const { Image } = useQRCode();
   return (
-    <div>
-      <h1>Contact</h1>
-      <a href="mailto:storejigu@gmail.com">storejigu@gmail.com</a>
-      <CommingSoon />
+    <div className="min-h-[60vh] flex flex-col justify-between items-center text-xl">
+      <h1 className="text-theme-gray font-bold my-2 text-3xl">Contact</h1>
+
+      <section className="w-full">
+        <div className="flex flex-row justify-center items-center gap-2">
+          <BiMailSend className="text-xl" />
+          <a href="mailto:storejigu@gmail.com" className="hover:underline">storejigu@gmail.com</a>
+        </div>
+        <div className="flex flex-row justify-center items-center gap-2">
+          <BiMobile className="text-xl" />
+          <a href="tel:+9779868053067">+977-9868053067</a>
+        </div>
+
+        <hr className="border border-theme-gray my-4" />
+
+        <h2 className="text-theme font-bold my-8">Other Media</h2>
+        <div className="flex flex-col sm:flex-row justify-evenly items-center gap-5 sm:gap-20">
+          <div className="flex flex-col justify-evenly items-center border border-theme-gray/30 shadow-sm rounded-md">
+            <Image
+              text={"https://wa.me/+9868053067"}
+              options={{
+                type: "image/jpeg",
+                quality: 0.3,
+                errorCorrectionLevel: "M",
+                margin: 1,
+                scale: 4,
+                width: 200,
+              }}
+            />
+            <FaWhatsapp className="text-theme-green text-3xl" />
+          </div>
+          <div className="flex flex-col justify-evenly items-center border border-theme-gray/30 shadow-sm rounded-md">
+            <Image
+              text={"viber://chat/?number=+9779868053067"}
+              options={{
+                type: "image/jpeg",
+                quality: 0.3,
+                errorCorrectionLevel: "M",
+                margin: 1,
+                scale: 4,
+                width: 200,
+              }}
+            />
+            <FaViber className="text-theme text-3xl" />
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

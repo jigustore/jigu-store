@@ -8,7 +8,7 @@ export const _serviceCatEntryBase = [
     },
     {
         title: "Sanitory Pad Despensor Machine",
-        descriptions: "Sanitory Pad Vending Machine has packets of pads that is dispensed after button press.",
+        descriptions: "Sanitory Pad Vending Machine description here..",
         available: true,
       },
     ],
@@ -18,15 +18,15 @@ export const _serviceCatEntryBase = [
     items: [
       {
         title: "Educational Kits",
-        descriptions: ""
+        descriptions: "Edu. Kit desc here.."
     },
     {
         title: "DIY Kits",
-        descriptions: ""
+        descriptions: "DIY kit desc here.."
     },
     {
         title: "Workshop-Training",
-        descriptions: ""
+        descriptions: "Workshop desc here.."
     },
 ],
 },
@@ -35,7 +35,7 @@ export const _serviceCatEntryBase = [
     items: [
         {
             title: "Bee Honey",
-            descriptions: "",
+            descriptions: "Honey from bee desc here..",
             available: true,
       },
     ],
