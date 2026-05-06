@@ -10,7 +10,7 @@ const Contact = () => {
     <div className="min-h-[60vh] flex flex-col justify-between items-center text-xl">
       <h1 className="text-theme-gray font-bold my-2 text-3xl">Contact</h1>
 
-      <section className="w-full">
+      <section className="w-full pb-10">
         <div className="flex flex-row justify-center items-center gap-2">
           <BiMailSend className="text-xl" />
           <a href="mailto:storejigu@gmail.com" className="hover:underline">
