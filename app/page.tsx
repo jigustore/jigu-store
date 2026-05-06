@@ -5,10 +5,9 @@ export default function Home() {
   return (
     <>
       <main className="min-h-screen min-w-screen relative flex flex-col justify-around items-center">
-        <img
-          src="/images/landing.png"
-          className="absolute -top-5 left-0 scale-105 opacity-10 bg-theme-black/10 -z-10"
-        />
+        <div className="absolute w-full h-screen -top-5 left-0 opacity-10 bg-theme-black/10 -z-10 overflow-hidden">
+          <img src="/images/landing.png" className="min-h-full object-cover" />
+        </div>
         <div>
           <span className="font-semibold text-xl text-theme-black">
             Build Unthinkable with
