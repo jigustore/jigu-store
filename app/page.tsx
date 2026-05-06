@@ -4,9 +4,13 @@ import CommingSoon from "./components/CommingSoon";
 export default function Home() {
   return (
     <>
-      <main className="min-h-screen min-w-screen flex flex-col justify-around items-center">
+      <main className="min-h-screen min-w-screen relative flex flex-col justify-around items-center">
+        <img
+          src="/images/landing.png"
+          className="absolute -top-5 left-0 scale-105 opacity-10 bg-theme-black/10 -z-10"
+        />
         <div>
-          <span className="font-semibold text-xl text-theme-gray">
+          <span className="font-semibold text-xl text-theme-black">
             Build Unthinkable with
           </span>
           <h1 className="bg-linear-to-r from-theme to-theme/70 via-theme-alt bg-size-[200%_auto] bg-clip-text text-transparent animate-gradient-x md:text-[10rem] text-7xl font-black p-4">

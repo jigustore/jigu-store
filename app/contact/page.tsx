@@ -13,7 +13,9 @@ const Contact = () => {
       <section className="w-full">
         <div className="flex flex-row justify-center items-center gap-2">
           <BiMailSend className="text-xl" />
-          <a href="mailto:storejigu@gmail.com" className="hover:underline">storejigu@gmail.com</a>
+          <a href="mailto:storejigu@gmail.com" className="hover:underline">
+            storejigu@gmail.com
+          </a>
         </div>
         <div className="flex flex-row justify-center items-center gap-2">
           <BiMobile className="text-xl" />
@@ -24,7 +26,10 @@ const Contact = () => {
 
         <h2 className="text-theme font-bold my-8">Other Media</h2>
         <div className="flex flex-col sm:flex-row justify-evenly items-center gap-5 sm:gap-20">
-          <a href="https://wa.me/+9868053067" className="flex flex-col justify-evenly items-center border border-theme-gray/30 shadow-sm rounded-md">
+          <a
+            href="https://wa.me/+9868053067"
+            className="flex flex-col justify-evenly items-center border border-theme-gray/30 shadow-sm rounded-md"
+          >
             <Image
               text={"https://wa.me/+9868053067"}
               options={{
@@ -36,9 +41,15 @@ const Contact = () => {
                 width: 200,
               }}
             />
-            <span>Whatsapp<FaWhatsapp className="text-theme-green text-3xl inline-block mx-1" /></span>
+            <span>
+              Whatsapp
+              <FaWhatsapp className="text-theme-green text-3xl inline-block mx-1" />
+            </span>
           </a>
-          <a href="viber://chat/?number=+9779868053067" className="flex flex-col justify-evenly items-center border border-theme-gray/30 shadow-sm rounded-md">
+          <a
+            href="viber://chat/?number=+9779868053067"
+            className="flex flex-col justify-evenly items-center border border-theme-gray/30 shadow-sm rounded-md"
+          >
             <Image
               text={"viber://chat/?number=+9779868053067"}
               options={{
@@ -50,7 +61,10 @@ const Contact = () => {
                 width: 200,
               }}
             />
-            <span>Viber<FaViber className="text-theme text-3xl inline-block mx-1" /></span>
+            <span>
+              Viber
+              <FaViber className="text-theme text-3xl inline-block mx-1" />
+            </span>
           </a>
         </div>
       </section>
