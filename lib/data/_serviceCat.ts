@@ -4,12 +4,13 @@ export const _serviceCatEntryBase = [
     items: [
       {
         title: "Snacks Vending Machine",
-        descriptions: "Snack Vending Machine has list of snack product items that user can choose and get after paying from QR."
+        descriptions: "Snack Vending Machine has list of snack product items that user can choose and get after paying from QR.",
+        status: "Comming Soon"
     },
     {
         title: "Sanitory Pad Despensor Machine",
         descriptions: "Sanitory Pad Vending Machine description here..",
-        available: true,
+        status: "Available for order"
       },
     ],
   },
@@ -18,15 +19,18 @@ export const _serviceCatEntryBase = [
     items: [
       {
         title: "Educational Kits",
-        descriptions: "Edu. Kit desc here.."
+        descriptions: "Edu. Kit desc here..",
+        status: "Comming Soon",
     },
     {
         title: "DIY Kits",
-        descriptions: "DIY kit desc here.."
+        descriptions: "DIY kit desc here..",
+        // status: "Comming Soon",
     },
     {
         title: "Workshop-Training",
-        descriptions: "Workshop desc here.."
+        descriptions: "Workshop desc here..",
+        status: "Comming Soon",
     },
 ],
 },
@@ -36,7 +40,7 @@ export const _serviceCatEntryBase = [
         {
             title: "Bee Honey",
             descriptions: "Honey from bee desc here..",
-            available: true,
+            status: "In stock"
       },
     ],
   },

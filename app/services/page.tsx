@@ -7,7 +7,7 @@ interface IServiceCatItem {
   title: string;
   imgURL?: string;
   descriptions?: string;
-  available?: boolean; // if false, then comming soon
+  status?: string; // if false, then comming soon
 }
 
 interface IServiceCat {
@@ -54,31 +54,36 @@ const ServiceCatItem = ({
   title,
   imgURL,
   descriptions,
-  available,
+  status,
 }: IServiceCatItem) => {
   return (
-    <div className="relative flex flex-col justify-evenly min-w-56 w-full h-full md:max-w-sm min-h-56 rounded-xl border border-theme/30 hover:border-theme hover:-translate-y-0.5 shadow-md p-2 duration-300 gap-4">
-      <span
-        className={`absolute top-[5%] left-[-5%] -rotate-45 animate-pulse font-bold text-vs ${!available ? "text-red-500" : "text-green-500"}`}
-      >
-        {!available ? "Comming Soon" : "Available"}
-      </span>
-      <h2 className="font-semibold">{title}</h2>
+    <div
+      className="relative min-w-56 w-full h-full md:max-w-sm min-h-56 flex flex-col rounded-xl shadow-sm overflow-hidden
+     border border-theme-gray/10 hover:border-theme-gray/50 hover:shadow-xl duration-300"
+    >
       <img
         src={imgURL}
         alt={title}
-        className="max-w-56 max-h-56 m-auto border-none"
+        className="w-full max-h-56 object-contain hover:scale-105 duration-300"
       />
-      <p className="text-theme-black-alt text-vs text-justify -mb-2">
-        {descriptions ? descriptions : "For More Info"}
-      </p>
-      <Link
-        href={`https://wa.me/+9779868053067?text=I am interested in ${title}`}
-        className="bg-theme-alt/80 hover:bg-theme text-theme-w p-1 px-2 font-semibold rounded-md"
-      >
-        <CiCircleInfo className="inline-block mr-2" />
-        Enquire now
-      </Link>
+      <div className="p-2 h-full flex flex-col justify-between gap-2">
+        <h2 className="font-bold">{title}</h2>
+        <p className="text-theme-black-alt text-vs text-justify font-light -mb-2">
+          {descriptions ? descriptions : "For More Info"}
+        </p>
+        <span
+          className={`animate-pulse text-left font-bold text-vs ${!status ? "text-red-500" : "text-green-500"}`}
+        >
+          {status || "Not Available"}
+        </span>
+        <Link
+          href={`https://wa.me/+9779868053067?text=I am interested in ${title}`}
+          className="bg-theme-alt/80 hover:bg-theme text-theme-w p-1 px-2 font-semibold rounded-md"
+        >
+          <CiCircleInfo className="inline-block mr-2" />
+          Enquire now
+        </Link>
+      </div>
     </div>
   );
 };
