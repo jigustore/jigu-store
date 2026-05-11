@@ -8,7 +8,7 @@ interface INavItem {
 
 const Navbar = () => {
   return (
-    <nav className="w-full z-50 flex flex-row justify-between items-center fixed top-0 bg-theme-w-alt p-3 px-6 gap-10">
+    <nav className="w-full z-50 flex flex-row justify-between items-center fixed top-0 bg-theme-w-alt dark:bg-theme-black-alt p-3 px-6 gap-10">
       <Link href={"/"} className="text-theme font-bold ">
         {/* Jigustore */}
         <img src="/icon.png" className="max-h-18 -my-10" />

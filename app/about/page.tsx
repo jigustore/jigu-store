@@ -26,7 +26,7 @@ const About = () => {
         </div>
         <Link
           href={"/services"}
-          className="border border-theme-gray/50 shadow-sm p-2 px-3 rounded-sm hover:bg-theme-w-alt"
+          className="border border-theme-gray/50 shadow-sm p-2 px-3 rounded-sm hover:bg-theme"
         >
           Explore Services
         </Link>

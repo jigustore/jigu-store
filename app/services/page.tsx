@@ -59,7 +59,7 @@ const ServiceCatItem = ({
   return (
     <div
       className="relative min-w-56 w-full h-full md:max-w-sm min-h-56 flex flex-col rounded-xl shadow-sm overflow-hidden
-     border border-theme-gray/10 hover:border-theme-gray/50 hover:shadow-xl duration-300"
+     border border-theme-gray/10 hover:border-theme-gray/50 dark:bg-theme-black-alt hover:shadow-xl duration-300"
     >
       <img
         src={imgURL}
@@ -68,7 +68,7 @@ const ServiceCatItem = ({
       />
       <div className="p-2 h-full flex flex-col justify-between gap-2">
         <h2 className="font-bold">{title}</h2>
-        <p className="text-theme-black-alt text-vs text-justify font-light -mb-2 font-main-alt">
+        <p className="text-vs text-justify font-light -mb-2 font-main-alt">
           {descriptions ? descriptions : "For More Info"}
         </p>
         <span

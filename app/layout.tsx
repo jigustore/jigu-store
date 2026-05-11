@@ -62,14 +62,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full antialiased`}>
+    <html lang="en" className={`h-full antialiased `}>
       <head>
         <meta
           name="google-site-verification"
           content="c6V1ouF2juqZmodl2dxau5EaIM-Ju2g_kYBO47d6OeU"
         />
       </head>
-      <body className="min-h-full flex flex-col justify-between items-center relative pt-15 text-center font-main">
+      <body className="min-h-full flex flex-col justify-between items-center relative pt-15 text-center font-main dark:text-theme-w dark:bg-theme-black">
         <Navbar />
         {children}
         <Footer />

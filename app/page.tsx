@@ -9,7 +9,7 @@ export default function Home() {
           <img src="/images/landing.png" className="min-h-full object-cover" />
         </div>
         <div>
-          <span className="font-semibold text-xl text-theme-black">
+          <span className="font-semibold text-xl">
             Build Unthinkable with
           </span>
           <h1 className="bg-linear-to-r from-theme to-theme/70 via-theme-alt bg-size-[200%_auto] bg-clip-text text-transparent animate-gradient-x md:text-[10rem] text-7xl font-black p-4">
@@ -23,7 +23,7 @@ export default function Home() {
           Browse Services
         </Link>
       </main>
-      <CommingSoon oClassName="bg-theme-red/20">
+      <CommingSoon oClassName="">
         Other Update Comming Soon!
       </CommingSoon>
     </>
