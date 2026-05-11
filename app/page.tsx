@@ -1,5 +1,7 @@
 import Link from "next/link";
 import CommingSoon from "./components/CommingSoon";
+import { _homeItems1, _homeItems2 } from "@/lib/data/_homeItems";
+import Card from "./components/Card";
 
 export default function Home() {
   return (
@@ -8,7 +10,8 @@ export default function Home() {
         <div className="absolute w-full h-screen -top-5 left-0 opacity-10 bg-theme-black/10 -z-10 overflow-hidden">
           <img src="/images/landing.png" className="min-h-full object-cover" />
         </div>
-        <div>
+        <div className="h-screen flex flex-col justify-around items-center">
+          <div>
           <span className="font-semibold text-xl">
             Build Unthinkable with
           </span>
@@ -19,9 +22,45 @@ export default function Home() {
         <Link
           href="/services"
           className="bg-theme-alt text-theme-w text-xl hover:bg-theme p-3 px-5 font-semibold rounded-md duration-300"
-        >
+          >
           Browse Services
         </Link>
+          </div>
+
+        <div className="w-full min-h-32 p-4 bg-theme">
+          <h2 className="font-bold text-4xl">Nepalese trusted brand</h2>
+          <p>Supporting every technological revolution. </p>
+        </div>
+
+        <section className="h-[50vh] flex flex-col justify-evenly items-center my-5 min-h-[50%]">
+            <h1 className="text-5xl font-bold">Experience Platform with</h1>
+          <div className="flex flex-row flex-wrap justify-evenly items-center gap-10">
+            {_homeItems1.map((item, ind) => {
+              return (
+                <Card key={ind}>
+                  <h2 className="font-bold text-xl">{item.title}</h2>
+                  <p className="font-main-alt text-vs">{item.description || "This is placeholder for description...."}</p>
+                  <Link href={item.url} className="bg-theme p-1 px-2 rounded-md hover:-translate-y-0.5 duration-300">Read More</Link>
+                </Card>
+              )
+            })}
+          </div>
+        </section>
+
+        <section className="h-[50vh] flex flex-col justify-evenly items-center my-5 min-h-[50%]">
+            <h1 className="text-5xl font-bold">Seamless integration of technology stack</h1>
+          <div className="flex flex-row flex-wrap justify-evenly items-center gap-10">
+            {_homeItems2.map((item, ind) => {
+              return (
+                <Card key={ind}>
+                  <h2 className="font-bold text-xl">{item.title}</h2>
+                  <p className="font-main-alt text-vs">{item.description || "This is placeholder for description...."}</p>
+                  <Link href={item.url} className="bg-theme p-1 px-2 rounded-md hover:-translate-y-0.5 duration-300">Read More</Link>
+                </Card>
+              )
+            })}
+          </div>
+        </section>
       </main>
       <CommingSoon oClassName="">
         Other Update Comming Soon!
