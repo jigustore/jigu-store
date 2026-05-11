@@ -32,13 +32,14 @@ export default function Home() {
           <p>Supporting every technological revolution. </p>
         </div>
 
-        <section className="h-[50vh] flex flex-col justify-evenly items-center my-5 min-h-[50%]">
-            <h1 className="text-5xl font-bold">Experience Platform with</h1>
+        <hr className="w-full border border-theme-gray my-5" />
+        <section className="flex flex-col justify-evenly items-center my-5 min-h-[50%]">
+            <h1 className="text-4xl font-bold">Experience Platform with</h1>
           <div className="flex flex-row flex-wrap justify-evenly items-center gap-10">
             {_homeItems1.map((item, ind) => {
               return (
                 <Card key={ind}>
-                  <h2 className="font-bold text-xl">{item.title}</h2>
+                  <h2 className="font-bold text-xl my-5">{item.title}</h2>
                   <p className="font-main-alt text-vs">{item.description || "This is placeholder for description...."}</p>
                   <Link href={item.url} className="bg-theme p-1 px-2 rounded-md hover:-translate-y-0.5 duration-300">Read More</Link>
                 </Card>
@@ -47,13 +48,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="h-[50vh] flex flex-col justify-evenly items-center my-5 min-h-[50%]">
-            <h1 className="text-5xl font-bold">Seamless integration of technology stack</h1>
+        <hr className="w-full border border-theme-gray my-5" />
+
+        <section className="flex flex-col justify-evenly items-center my-5 min-h-[50%]">
+            <h1 className="text-4xl font-bold">Seamless integration of technology stack</h1>
           <div className="flex flex-row flex-wrap justify-evenly items-center gap-10">
             {_homeItems2.map((item, ind) => {
               return (
                 <Card key={ind}>
-                  <h2 className="font-bold text-xl">{item.title}</h2>
+                  <h2 className="font-bold text-xl my-5">{item.title}</h2>
                   <p className="font-main-alt text-vs">{item.description || "This is placeholder for description...."}</p>
                   <Link href={item.url} className="bg-theme p-1 px-2 rounded-md hover:-translate-y-0.5 duration-300">Read More</Link>
                 </Card>
