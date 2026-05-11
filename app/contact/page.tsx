@@ -8,7 +8,7 @@ const Contact = () => {
   const { Image } = useQRCode();
   return (
     <div className="min-h-[60vh] flex flex-col justify-between items-center text-xl">
-      <h1 className="text-theme-gray font-bold my-2 text-3xl">Contact</h1>
+      <h1 className="text-theme font-bold my-2 text-3xl">Contact</h1>
 
       <section className="w-full pb-10">
         <div className="flex flex-row justify-center items-center gap-2">
@@ -24,7 +24,7 @@ const Contact = () => {
 
         <hr className="border border-theme-gray my-4" />
 
-        <h2 className="text-theme font-bold my-8">Other Media</h2>
+        <h2 className="text-theme-gray font-bold my-8">Other Media</h2>
         <div className="flex flex-col sm:flex-row justify-evenly items-center gap-5 sm:gap-20">
           <a
             href="https://wa.me/+9868053067"
@@ -63,7 +63,7 @@ const Contact = () => {
             />
             <span>
               Viber
-              <FaViber className="text-theme text-3xl inline-block mx-1" />
+              <FaViber className="text-[#725ac1] text-3xl inline-block mx-1" />
             </span>
           </a>
         </div>

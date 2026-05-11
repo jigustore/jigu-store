@@ -69,7 +69,7 @@ export default function RootLayout({
           content="c6V1ouF2juqZmodl2dxau5EaIM-Ju2g_kYBO47d6OeU"
         />
       </head>
-      <body className="min-h-full flex flex-col justify-between items-center relative pt-15 text-center">
+      <body className="min-h-full flex flex-col justify-between items-center relative pt-15 text-center font-main">
         <Navbar />
         {children}
         <Footer />

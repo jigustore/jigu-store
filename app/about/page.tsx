@@ -3,7 +3,7 @@ import Link from "next/link";
 const About = () => {
   return (
     <div className="w-full px-10 md:px-20 text-left">
-      <h1 className="font-bold my-4 text-xl text-theme-gray">About</h1>
+      <h1 className="font-bold my-4 text-3xl text-theme">About</h1>
 
       <section className="w-full flex flex-col justify-between items-start gap-10 py-5">
         {/* <span className="text-theme text-8xl font-bold">Jigu Store</span> */}

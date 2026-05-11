@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 @import "tailwindcss";
 
 @theme {
-  --color-theme: #725ac1;
-  --color-theme-alt: #836bd2;
+  --color-theme: #ff5757;
+  --color-theme-alt: #ff6b7b;
   --color-theme-w: #ffffff;
   --color-theme-w-alt: #efefef;
   --color-theme-black: #111111;
@@ -10,6 +13,8 @@
   --color-theme-green: #11ee11;
   --color-theme-red: #ee1111;
   --color-theme-gray: #787878;
+  --font-main: "League Spartan", sans-serif;
+  --font-main-alt: "Rubik", sans-serif;
   --text-s: 0.85rem;
   --text-vs: 0.75rem;
   --text-vse9: 0.9em;

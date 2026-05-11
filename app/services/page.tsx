@@ -18,7 +18,7 @@ interface IServiceCat {
 const Services = () => {
   return (
     <div className="w-full">
-      <h1 className="text-theme-gray font-bold my-2 text-3xl">Services</h1>
+      <h1 className="text-theme font-bold my-2 text-3xl font-main">Services</h1>
 
       <section className="w-full m-auto max-w-6xl flex flex-col justify-evenly items-center gap-6 my-10 md:px-20 px-10">
         {_serviceCatEntry.map((sce, ind) => {
@@ -36,7 +36,7 @@ const Services = () => {
 const ServiceCat = ({ title, items }: IServiceCat) => {
   return (
     <div className="w-full my-2 flex flex-col justify-evenly items-start">
-      <h2 className="font-extrabold text-theme mb-5 text-xl p-1">
+      <h2 className="font-extrabold text-theme-gray mb-5 text-xl p-1">
         <CiStar className="inline-block mr-1" />
         {title}
       </h2>
@@ -68,7 +68,7 @@ const ServiceCatItem = ({
       />
       <div className="p-2 h-full flex flex-col justify-between gap-2">
         <h2 className="font-bold">{title}</h2>
-        <p className="text-theme-black-alt text-vs text-justify font-light -mb-2">
+        <p className="text-theme-black-alt text-vs text-justify font-light -mb-2 font-main-alt">
           {descriptions ? descriptions : "For More Info"}
         </p>
         <span
@@ -78,7 +78,7 @@ const ServiceCatItem = ({
         </span>
         <Link
           href={`https://wa.me/+9779868053067?text=I am interested in ${title}`}
-          className="bg-theme-alt/80 hover:bg-theme text-theme-w p-1 px-2 font-semibold rounded-md"
+          className="bg-theme-alt hover:bg-theme text-theme-w p-1 px-2 font-semibold rounded-md"
         >
           <CiCircleInfo className="inline-block mr-2" />
           Enquire now
